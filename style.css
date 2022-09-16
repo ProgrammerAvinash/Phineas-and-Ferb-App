@@ -7,6 +7,15 @@ header {
   text-align: center;
   border: 10px purple solid;
   background-color: purple;
+  color: aliceblue;
+}
+
+img {
+  position: absolute;
+  left: 10%;
+  height: 100px;
+  width: 100px;
+  top: 20px;
 }
 
 .container {
@@ -19,11 +28,11 @@ header {
 .translateButton {
   display: block;
   height: 20px;
-  position: absolute;
-  top: 30vh;
-  left: 40vw;
-  margin-bottom: 10rem;
-  margin: 2rem;
+  position: fixed;
+  margin-top: 10px;
+  left: 45vw;
+  background: purple;
+  color: aliceblue;
   border-radius: 10px;
 }
 
@@ -49,11 +58,17 @@ header {
   padding: 3vh;
   top: 30%;
 }
-.header {
+
+footer {
   text-align: center;
   padding: 3vh;
   border: 10px yellow;
-  background-color: yellow;
+  background-color: purple;
+  position: absolute;
+  bottom: 5px;
+  height: 2rem;
+  width: 100%;
+  color: aliceblue;
 }
 
 .textAreaToTranslate {
@@ -61,20 +76,6 @@ header {
   width: 30rem;
   padding: 1rem;
 
-  margin: 1rem;
-  border-radius: 10px;
-  border: 1px black solid;
-}
-.outputBoxText {
-  display: flexbox;
-  margin-left: 50px;
-}
-
-.textAreaTranslated {
-  height: 10vh;
-  width: 30rem;
-  padding: 1rem;
-  background: white;
   margin: 1rem;
   border-radius: 10px;
   border: 1px black solid;
