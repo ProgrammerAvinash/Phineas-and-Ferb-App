@@ -10,13 +10,14 @@ var Url = "https://api.funtranslations.com/translate/ferb-latin.json";
 function getTranslationURL(text) {
   return Url + "?" + "text=" + text;
 }
-
+function errorHandler(error) {
+  alert("something went wrong !!!! please try after sometime ");
+}
 function clickHandler() {
   var userInput = textAreaToTranslate.value;
+
   console.log(userInput);
-  if (userInput == "") {
-    errorMsgValue.innerText = "Please Enter Text To Translate";
-  }
+
   fetch(getTranslationURL(userInput))
     .then((response) => response.json())
     .then((json) => {
@@ -24,7 +25,8 @@ function clickHandler() {
       translatedTextArea.innerText = translatedText;
       console.log(translatedText);
       console.log(translatedTextArea.value);
-    });
+    })
+    .catch(errorHandler);
 }
 
 btnTranslate.addEventListener("click", clickHandler);
